@@ -4,10 +4,12 @@ const gulp = require('gulp');
 const gutil = require("gulp-util");
 const webpack = require("webpack");
 const WebpackDevServer = require("webpack-dev-server");
+const WriteFileWebpackPlugin = require('write-file-webpack-plugin');
 
 var webpackConfig = require('./webpack.config.js');
 
 // Gulp tasks
+
 gulp.task('default', ['watch']);
 gulp.task('build', function(callback) {
     // run webpack
@@ -22,6 +24,7 @@ gulp.task('build', function(callback) {
 gulp.task('watch', function(callback) {
     webpackConfig.entry.app.unshift("webpack-dev-server/client?http://localhost:8080", "webpack/hot/dev-server");
     webpackConfig.plugins.push(new webpack.HotModuleReplacementPlugin())
+    webpackConfig.plugins.push(new WriteFileWebpackPlugin());
     var compiler = webpack(webpackConfig);
     var server = new WebpackDevServer(compiler, {
         contentBase: 'dist',
