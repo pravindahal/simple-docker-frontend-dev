@@ -1,0 +1,32 @@
+{
+  "name": "simple-docker-frontend-dev",
+  "version": "1.0.0",
+  "description": "A simple example demonstrating a docker-based local development and production containers for frontend development",
+  "main": "src/main.js",
+  "dependencies": {
+    "cat-ascii-faces": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.2",
+    "babel-plugin-transform-runtime": "^6.6.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-runtime": "^6.6.1",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7",
+    "webpack": "^1.13.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pravindahal/simple-docker-frontend-dev.git"
+  },
+  "author": "Pravin Dahal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pravindahal/simple-docker-frontend-dev/issues"
+  },
+  "homepage": "https://github.com/pravindahal/simple-docker-frontend-dev#readme"
+}
