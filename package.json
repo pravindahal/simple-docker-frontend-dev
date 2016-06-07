@@ -18,7 +18,8 @@
     "write-file-webpack-plugin": "^3.1.8"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "start-dev": "gulp watch"
   },
   "repository": {
     "type": "git",
